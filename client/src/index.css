@@ -1,5 +1,22 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* index.css */
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
+@font-face {
+  font-family: Montserrat ;
+  src: url(./assets/fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+  font-family: CormorantGaramond ;
+  src: url(./assets/fonts/CormorantGaramond-Regular.ttf);
+}
+
+
+
+@import "tailwindcss";
+@plugin "daisyui";
+
+
+@theme{
+  --font-montserrat: Montserrat, "sans-serif";
+  --font-cormorant: CormorantGaramond, "serif";
+}
