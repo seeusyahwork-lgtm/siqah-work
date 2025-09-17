@@ -1,4 +1,9 @@
-// App.jsx
+// /client/src/App.jsx
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/guest/P_guest";
+import DashboardUser from "./pages/konsumen/P_Konsumen";
+import DashboardSuperadmin from "./pages/admin/superadmin/P_superadmin";
 import React from 'react'
 import './App.css'
 
@@ -6,15 +11,18 @@ import './App.css'
 const App = () => {
   return (
    
-    <div className="p-8">
-      <h1 className="text-4xl font-cormorant font-bold">
-        Ini Judul dengan Cormorant Garamond
-      </h1>
-      <p className="mt-4 font-montserrat ">
-        Ini paragraf dengan Montserrat.
-      </p>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        {/* Guest */}
+        <Route path="/" element={<Home />} />
 
+        {/* User */}
+        <Route path="/user/dashboard" element={<DashboardUser />} />
+
+        {/* Admin Superadmin */}
+        <Route path="/admin/superadmin" element={<DashboardSuperadmin />} />
+      </Routes>
+    </BrowserRouter>
 
 
   )
