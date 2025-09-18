@@ -1,17 +1,14 @@
 
 // /client/src/components/guest/CG_Pembukaan.jsx
 
-import bgSiqah from '../../assets/img/background-siqah.jpeg'
+
 import logoOnly from '../../assets/lg/Siqah-lg-500px.png'
 
 
 const CG_Pembukaan = () => {
-  return (
-    <div
-            className="w-full h-auto bg-cover bg-center"
-            style={{ backgroundImage: `url(${bgSiqah})` }}
-        >
-            <div className='flex flex-col lg:flex-row h-auto lg:h-[600px]'>
+    return (
+        <div className="w-full h-auto bg-cover bg-center mb-10" >
+            <div className='flex flex-col lg:flex-row h-auto '>
 
                 {/* ==============================
             BAGIAN KIRI: FOTO-FOTO KOLOM
@@ -58,19 +55,19 @@ const CG_Pembukaan = () => {
                         </h1>
 
                         {/* PARAGRAF: Cormorant Garamond */}
-                        <p className="text-base sm:text-lg text-[#45624B] mb-8  font-montserrat">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, officiis.
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur,
-                            earum porro velit consequatur tempora voluptatibus voluptatum expedita
-                            cumque fugiat, quasi accusantium harum minus doloribus vitae optio tempore.
-                            Hic, rerum expedita. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Quae in soluta molestias et ut atque sit tempore quam deserunt ea illum,
-                            nisi, eos error repudiandae? Eaque libero accusantium non aliquam.
-                        </p>
+                        <p className="text-base sm:text-lg text-[#45624B] mb-8 font-bold font-montserrat">
+                            Siqah Akikah adalah layanan akikah terpercaya yang berdiri sejak tahun 2025 di Bandung,
+                             dengan visi menghadirkan pengalaman akikah yang praktis, syar’i, dan berkesan bagi setiap keluarga Muslim.
+                            <br />
+                             Berangkat dari kebutuhan para orang tua akan layanan akikah yang tidak hanya mudah,
+                             tapi juga amanah dan sesuai tuntunan, Siqah lahir sebagai solusi yang mengedepankan kualitas,
+                              kejujuran, dan pelayanan terbaik.
 
+                        </p>
+                        
                         {/* TOMBOL CTA */}
                         <button className="bg-[#B9914D] hover:bg-[#a37f3e] text-white font-bold py-2 px-6 rounded">
-                            Mulai Sekarang
+                            Baca Lebih Lanjut
                         </button>
 
 
@@ -78,7 +75,7 @@ const CG_Pembukaan = () => {
                 </div>
             </div>
         </div>
-  )
+    )
 }
 
 export default CG_Pembukaan
