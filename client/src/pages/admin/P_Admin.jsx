@@ -1,24 +1,32 @@
+// ./pages/admin/P_Admin.jsx
 import React, { useState } from 'react';
 import { FaRegUser } from "react-icons/fa6";
 import { MdDataset } from "react-icons/md";
 import { FiChevronDown } from "react-icons/fi";
 import { IoLogOutOutline } from "react-icons/io5";
 import { LuPackage } from "react-icons/lu";
-import { GiGoat, GiSheep } from "react-icons/gi";
+import { GiGoat } from "react-icons/gi";
 import { FaKitchenSet } from "react-icons/fa6";
 import { FaTruck } from "react-icons/fa";
+
+// Import komponen konten
+import CT_Paket from '../../components/admin/tabel/CT_Paket';
+import CT_Proses from '../../components/admin/tabel/CT_Proses';
+import CT_Histori from '../../components/admin/tabel/CT_Histori';
+import CT_Konsumen from '../../components/admin/tabel/CT_Konsumen';
+import CT_PetugasKandang from '../../components/admin/tabel/CT_PetugasKandang';
+import CT_Dapur from '../../components/admin/tabel/CT_Dapur';
+import CT_Kurir from '../../components/admin/tabel/CT_Kurir';
 
 const P_Admin = () => {
     const [activeComponent, setActiveComponent] = useState('');
 
     return (
         <div className='grid gap-2 p-4 grid-cols-[250px_minmax(900px,_1fr)] max-h-auto'>
-
             {/* Sidebar */}
             <div className='max-h-[calc(100vh-32px)] w-56'>
                 <div className='overflow-y-scroll sticky top-4 h-[calc(100vh-32px-48px)]'>
                     <div className='flex flex-col gap-2'>
-
                         {/* Wadah akunToggle */}
                         <div className="border-b mb-4 mt-2 pb-4 border-stone-300">
                             <button className="flex p-0.5 hover:bg-stone-300 hover:text-black rounded transition-colors relative gap-2 w-full items-center">
@@ -91,7 +99,7 @@ const P_Admin = () => {
                                                 ? 'bg-teal-600 text-white'
                                                 : 'text-teal-600 hover:underline'}`}
                                     >
-                                        <GiGoat /> Kandang
+                                        <GiGoat /> Petugas Kandang
                                     </button>
                                 </li>
 
@@ -103,7 +111,7 @@ const P_Admin = () => {
                                                 ? 'bg-teal-600 text-white'
                                                 : 'text-teal-600 hover:underline'}`}
                                     >
-                                        <FaKitchenSet /> Dapur
+                                        <FaKitchenSet /> Petugas Dapur
                                     </button>
                                 </li>
 
@@ -132,7 +140,6 @@ const P_Admin = () => {
                                 </li>
                             </ul>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -160,13 +167,13 @@ const P_Admin = () => {
 
                 {/* Tempat isi konten sesuai activeComponent */}
                 <div className="p-4">
-                    {activeComponent === "paket" && <div>📦 Daftar Paket</div>}
-                    {activeComponent === "pesanan" && <div>🧾 Data Pesanan</div>}
-                    {activeComponent === "histori" && <div>📜 Histori Pesanan</div>}
-                    {activeComponent === "kandang" && <div>🐔 Data Kandang</div>}
-                    {activeComponent === "dapur" && <div>🍳 Data Dapur</div>}
-                    {activeComponent === "kurir" && <div>🚚 Data Kurir</div>}
-                    {activeComponent === "konsumen" && <div>👤 Data Konsumen</div>}
+                    {activeComponent === "paket" && <CT_Paket />}
+                    {activeComponent === "pesanan" && <CT_Proses />}
+                    {activeComponent === "histori" && <CT_Histori />}
+                    {activeComponent === "kandang" && <CT_PetugasKandang />}
+                    {activeComponent === "dapur" && <CT_Dapur />}
+                    {activeComponent === "kurir" && <CT_Kurir />}
+                    {activeComponent === "konsumen" && <CT_Konsumen />}
                 </div>
             </div>
         </div>
