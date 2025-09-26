@@ -1,5 +1,4 @@
 // server/controllers/login.js
-
 const User = require("../models/User");
 
 // Login sederhana tanpa hash
@@ -18,13 +17,14 @@ const login = async (req, res) => {
       return res.status(400).json({ message: "Password salah ❌" });
     }
 
-    // 3. Jika sukses
+    // 3. Jika sukses, kirim role_id secara konsisten
     res.json({
       message: "Anda telah masuk ✅",
       user: {
         id: user._id,
         name: user.name,
         email: user.email,
+        role_id: user.role_id, // pastikan property ini sama seperti di DB
       },
     });
   } catch (error) {

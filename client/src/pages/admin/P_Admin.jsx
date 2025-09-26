@@ -21,6 +21,15 @@ import CT_Kurir from '../../components/admin/tabel/CT_Kurir';
 const P_Admin = () => {
     const [activeComponent, setActiveComponent] = useState('');
 
+    const handleLogout = () => {
+        // Hapus data user dari localStorage
+        localStorage.removeItem("user");
+        // Reset active component
+        setActiveComponent('');
+        // Redirect ke halaman utama
+        window.location.href = "/";
+    };
+
     return (
         <div className='grid gap-2 p-4 grid-cols-[250px_minmax(900px,_1fr)] max-h-auto'>
             {/* Sidebar */}
@@ -157,7 +166,10 @@ const P_Admin = () => {
                                 })}
                             </span>
                         </div>
-                        <button className="btn btn-outline btn-secondary">
+                        <button
+                            className="btn btn-outline btn-secondary"
+                            onClick={handleLogout}
+                        >
                             <IoLogOutOutline /> Logout
                         </button>
                     </div>
