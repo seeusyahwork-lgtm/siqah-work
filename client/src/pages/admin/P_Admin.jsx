@@ -4,7 +4,7 @@ import { MdDataset } from "react-icons/md";
 import { FiChevronDown } from "react-icons/fi";
 import { IoLogOutOutline } from "react-icons/io5";
 import { LuPackage } from "react-icons/lu";
-import { GiChicken } from "react-icons/gi";
+import { GiGoat, GiSheep } from "react-icons/gi";
 import { FaKitchenSet } from "react-icons/fa6";
 import { FaTruck } from "react-icons/fa";
 
@@ -15,7 +15,7 @@ const P_Admin = () => {
         <div className='grid gap-2 p-4 grid-cols-[250px_minmax(900px,_1fr)] max-h-auto'>
 
             {/* Sidebar */}
-            <div className='container max-h-[calc(100vh-32px)]'>
+            <div className='max-h-[calc(100vh-32px)] w-56'>
                 <div className='overflow-y-scroll sticky top-4 h-[calc(100vh-32px-48px)]'>
                     <div className='flex flex-col gap-2'>
 
@@ -25,7 +25,7 @@ const P_Admin = () => {
                                 <img
                                     src="https://api.dicebear.com/9.x/croodles/svg?seed=Brian"
                                     alt="avatar"
-                                    className="size-8 round shrink-0 bg-teal-600 shadow"
+                                    className="size-8 rounded-full shrink-0 bg-teal-600 shadow"
                                 />
                                 <div className="text-start">
                                     <span className="text-sm font-semibold block">Bpk. Suparno.SH</span>
@@ -91,7 +91,7 @@ const P_Admin = () => {
                                                 ? 'bg-teal-600 text-white'
                                                 : 'text-teal-600 hover:underline'}`}
                                     >
-                                        <MdConstruction /> Kandang
+                                        <GiGoat /> Kandang
                                     </button>
                                 </li>
 
@@ -103,7 +103,7 @@ const P_Admin = () => {
                                                 ? 'bg-teal-600 text-white'
                                                 : 'text-teal-600 hover:underline'}`}
                                     >
-                                        <MdConstruction /> Dapur
+                                        <FaKitchenSet /> Dapur
                                     </button>
                                 </li>
 
@@ -115,7 +115,7 @@ const P_Admin = () => {
                                                 ? 'bg-teal-600 text-white'
                                                 : 'text-teal-600 hover:underline'}`}
                                     >
-                                        <FaUserTie /> Kurir
+                                        <FaTruck /> Kurir
                                     </button>
                                 </li>
 
@@ -131,7 +131,6 @@ const P_Admin = () => {
                                     </button>
                                 </li>
                             </ul>
-
                         </div>
 
                     </div>
@@ -160,6 +159,15 @@ const P_Admin = () => {
                 </div>
 
                 {/* Tempat isi konten sesuai activeComponent */}
+                <div className="p-4">
+                    {activeComponent === "paket" && <div>📦 Daftar Paket</div>}
+                    {activeComponent === "pesanan" && <div>🧾 Data Pesanan</div>}
+                    {activeComponent === "histori" && <div>📜 Histori Pesanan</div>}
+                    {activeComponent === "kandang" && <div>🐔 Data Kandang</div>}
+                    {activeComponent === "dapur" && <div>🍳 Data Dapur</div>}
+                    {activeComponent === "kurir" && <div>🚚 Data Kurir</div>}
+                    {activeComponent === "konsumen" && <div>👤 Data Konsumen</div>}
+                </div>
             </div>
         </div>
     );
