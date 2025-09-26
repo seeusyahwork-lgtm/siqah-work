@@ -30,15 +30,13 @@ const P_Admin = () => {
                         {/* Wadah akunToggle */}
                         <div className="border-b mb-4 mt-2 pb-4 border-stone-300">
                             <button className="flex p-0.5 hover:bg-stone-300 hover:text-black rounded transition-colors relative gap-2 w-full items-center">
-                                <img
-                                    src="https://api.dicebear.com/9.x/croodles/svg?seed=Brian"
-                                    alt="avatar"
-                                    className="size-8 rounded-full shrink-0 bg-teal-600 shadow"
-                                />
+                                <div className="bg-neutral text-neutral-content w-16 rounded-full">
+                                    <span className="text-xl">SA</span>
+                                </div>
                                 <div className="text-start">
-                                    <span className="text-sm font-semibold block">Bpk. Suparno.SH</span>
+                                    <span className="text-sm font-semibold block">Super Admin</span>
                                     <span className="text-sm font-bold block text-stone-400">
-                                        Suparno@gmail.com
+                                        SuperAdmin@siqah.com
                                     </span>
                                 </div>
                                 <FiChevronDown className="absolute right-2 top-1/2 translate-y-[-50%] text-xs" />
