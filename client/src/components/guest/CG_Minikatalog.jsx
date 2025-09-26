@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Paket from '../../assets/img/Paket_all.jpeg'
 
 function CG_Minikatalog() {
     return (
@@ -15,43 +15,43 @@ function CG_Minikatalog() {
                     <div className="carousel carousel-center bg-neutral rounded-box w-4/5 mx-auto space-x-4 p-4">
                         <div className="carousel-item">
                             <img
-                                src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp"
+                                src={Paket} 
                                 className="rounded-box"
                             />
                         </div>
                         <div className="carousel-item">
                             <img
-                                src="https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp"
+                                src={Paket} 
                                 className="rounded-box"
                             />
                         </div>
                         <div className="carousel-item">
                             <img
-                                src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp"
+                                src={Paket} 
                                 className="rounded-box"
                             />
                         </div>
                         <div className="carousel-item">
                             <img
-                                src="https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp"
+                                src={Paket} 
                                 className="rounded-box"
                             />
                         </div>
                         <div className="carousel-item">
                             <img
-                                src="https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp"
+                                src={Paket} 
                                 className="rounded-box"
                             />
                         </div>
                         <div className="carousel-item">
                             <img
-                                src="https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp"
+                                src={Paket} 
                                 className="rounded-box"
                             />
                         </div>
                         <div className="carousel-item">
                             <img
-                                src="https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp"
+                                src={Paket} 
                                 className="rounded-box"
                             />
                         </div>

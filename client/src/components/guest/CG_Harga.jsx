@@ -43,7 +43,9 @@ const CG_Harga = () => {
                         <img src={Paket} alt="paket_all" className="w-full h-auto" />
                     </figure>
                     <div className="card-body">
-                        <h2 className="card-title">Card Title</h2>
+                        <h2 className="card-title sm:text-2xl font-bold text-[#B9914D] font-cormorant justify-center">
+                            Paket Premium
+                        </h2>
                         <p>
                             A card component has a figure, a body part, and inside body there are title and actions parts
                         </p>
@@ -60,7 +62,9 @@ const CG_Harga = () => {
                         <img src={Paket} alt="paket_all" className="w-full h-auto" />
                     </figure>
                     <div className="card-body">
-                        <h2 className="card-title">Card Title</h2>
+                       <h2 className="card-title sm:text-2xl font-bold text-[#B9914D] font-cormorant justify-center">
+                            Paket Premium
+                        </h2>
                         <p>
                             A card component has a figure, a body part, and inside body there are title and actions parts
                         </p>

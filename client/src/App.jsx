@@ -3,7 +3,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/guest/P_guest";
 import DashboardUser from "./pages/konsumen/P_Konsumen";
-import DashboardSuperadmin from "./pages/admin/superadmin/P_superadmin";
+import DashboardSuperadmin from "./pages/admin/P_Admin";
 import React from 'react'
 import './App.css'
 
@@ -20,7 +20,7 @@ const App = () => {
         <Route path="/user/dashboard" element={<DashboardUser />} />
 
         {/* Admin Superadmin */}
-        <Route path="/admin/superadmin" element={<DashboardSuperadmin />} />
+        <Route path="/admin" element={<DashboardSuperadmin />} />
       </Routes>
     </BrowserRouter>
 
